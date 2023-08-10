@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
+<!-- 
+This <nav> section will include all of the parameters for my navbar! 
+>> "container-fluid" allows me to have the background of the nav bar fill in it's respective space,
+and allows me to create multiple elements within the nav bar too
+>> I also added a custom color for the banner too.
+>> "home" and "contact" have working links to their respective pages.
+"Gainz" does not have a seperate page to link to.
+>> The "navbar-expand" had to be md because lg would pull up a drop down menu.
+-->
+
+    <nav class="navbar navbar-expand-md mb-3 pb-3 bg-color2" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Gainz</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -32,7 +42,67 @@
         </div>
       </nav>
     
+      <h3 class="text-center mb-3 pb-3">A few examples of some amazing leg workouts:</h3>
 
+<!--        
+The code listed below covers all of the table contents.
+>> "table-striped" allowed me to add different sharding on evey other row on the table.
+>> The "scope=col" sections helped me label and ID each individual row.
+>> Other from that, all of the table contents are pretty simular to normal HTML code (without bootstrap).
+-->
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Lift Name</th>
+      <th scope="col">Muscle Group</th>
+      <th scope="col">Good For You?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Back Squat</td>
+      <td>Quads/Glutes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Deadlift</td>
+      <td>Back/Hamstrings</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Glute Bridge</td>
+      <td>Your Dang Glutes</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--   
+The image and form display a simple Q and A scenario.
+>>All the class elements decribed made it possible to center the image perfectly, 
+and also give the image round corners.
+>>Forms will be decribed in better detail on the contact.html file.
+-->
+    <img
+          src="https://i.ytimg.com/vi/FJRMldSmy-M/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-BIAC4AOKAgwIABABGGUgXChSMA8=&rs=AOn4CLBVAXTdxc9wip-jT4zivomOe6YWdw"
+          class ="bg-img rounded mx-auto d-block"
+          alt="Legs for days."
+          width="500"
+        />
+
+        <form>
+            <div class="mb-3">
+              <label for="whoIsThis?" class="form-label">Who is this?</label>
+              <input type="question" class="form-control" id="whoIsThis?" 
+              aria-describedby="answerHelp">
+              <div id="answerHelp" class="form-text">Hint: First initial -> R </div>
+            </div>
+            <button type="submit" class="btn btn-secondary">Submit</button>
+        </form>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>

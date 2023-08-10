@@ -5,46 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-light">
+<!-- 
+This navbar is described in more detail on the week09assignment.html file.
+ -->
+  <nav class="navbar navbar-expand-md mb-3 pb-3 bg-color2" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">Gainz</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" 
+      aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" 
+            href="week09assignment.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
 
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <h1 class="text-center mb-3 bg-info">
+    Do you have any crazy questions about leg days?</h1>
+  <!-- 
+      This navbar is described in more detail on the week09assignment.html file. 
+  -->
+    <img
+          src="https://static.wikia.nocookie.net/the-battle-doges/images/9/90/MachoLegCat.png/revision/latest/thumbnail/width/360/height/360?cb=20210906073959"
+          class="bg-img rounded mx-auto d-block"
+          alt="Legs for days."
+          width="500"
+        />
+<!--  
+  I used a cutom color for the background of this header.
+-->
+  <h6 class="mb-3 fs-5 bg-color1">
+    Send us your email and phone number, 
+    and we will reach out to you in 2 business days! </h6>
+
+<!--  
+The code bellow will explain the forms used for this page and the other smaller one on another html file.
+>> The label function allowed me to put a description above the input box.
+>> The input section contains all the parameters and classes to make the box work.
+>> The div bellow the first input section allowed me to make another label below the answer box.
+>> Closer to the bottom of the form's code; I made a check box in the bottom using similar parameters used to create text boxes.
+>> Lastly, I made a submit button with a custom color in there as well.
+-->
+
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" 
+      aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPhone1" class="form-label">Phone #</label>
+      <input type="phone #" class="form-control" id="exampleInputPhone1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Remember email and phone?</label>
+    </div>
+    <button type="submit" class="btn btn-warning mb-3 pb-3">Submit</button>
+  </form>
+
+<!--  
+The code listed bellow displays a small grid.
+>>"col-md-04" allowed me to verticlally align the classes if the page turns small.
+>>There are two different headers to display the effectiveness of the "col-md-4" element.
+-->
+  <div id="other-lifts" class="container text-center mb-5 fs-4">
+    <div class="row"><h3 class="mb-3 pb-3 bg-color2" >Here some other great lifting exercises!!</h3></div>
+
+    <div class="row">
+      <div class="col-md-4 mb-3 pb-3" >Bench Press</div>
+      <div class="col-md-4 mb-3 pb-3">Dumbell Rows</div>
+      <div class="col-md-4 mb-3 pb-3">Goblet Squats</div>
+    </div>
+    <div class="row"><hs class="mb-3 pb-3 bg-info">Never forget about these exercises!</hs>
+      <div class="col-md-4 mb-3 pb-3">Pull Ups</div>
+      <div class="col-md-4 mb-3 pb-3">Push Ups</div>
+      <div class="col-md-4 mb-3 pb-3">Crunches</div>
+    </div>
+  </div>
+
 </body>
 </html>

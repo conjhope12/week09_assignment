@@ -4,3 +4,11 @@
     background-position: center top;
     height:500px;
 }
+
+.bg-color1 {
+    background-color: rgba(255, 196, 0, 0.733);
+}
+
+.bg-color2 {
+    background-color: rgb(128, 0, 128);
+}
